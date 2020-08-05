@@ -51,8 +51,8 @@
 /* Background */
 
 .bg {
-    &_blue {
-        background-color: var(--color-blue);
+    &_krayola {
+        background-color: var(--color-krayola);
     }
     &_white {
         background-color: var(--color-white);
@@ -60,27 +60,24 @@
     &_gray {
         background-color: var(--color-gray);
     }
-    &_dark-gray {
-        background-color: var(--color-dark-gray);
-	}
 }
 
 /* Title */
 
 .title {
-    font-family: var(--font-gotham);
+    font-family: var(--font-roboto);
     font-style: normal;
     margin: 0;
     &_big {
 		@include xls(font-size, 28px);
-		@include sm(font-size, 20px);
-		font-size: 38px;
+		@include sm(font-size, 24px);
+		font-size: 32px;
     }
     &_medium {
-        font-size: 24px;
+        font-size: 22px;
     }
-    &_blue {
-        color: var(--color-blue);
+    &_violet {
+        color: var(--color-violet);
     }
     &_white {
         color: var(--color-white);
@@ -102,16 +99,6 @@
 	}
 }
 
-.title-second {
-    font-family: var(--font-roboto);
-    font-style: normal;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 100%;
-    color: var(--color-blue);
-    margin: 0;
-}
-
 /* Text */
 
 .text {
@@ -124,8 +111,8 @@
 	&_white {
 		color: var(--color-white);
 	} 
-	&_white-gray {
-		color: var(--color-white-gray);
+	&_gray {
+		color: var(--color-gray);
 	}
 	&_s-normal {
 		font-size: 16px;
@@ -141,5 +128,8 @@
 	}
 	&_w-bold {
 		font-weight: 700;
+	}
+	&_black {
+		font-weight: 900;
 	}
 }
