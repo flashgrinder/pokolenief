@@ -17,7 +17,9 @@ let gulp          = require('gulp'),
 	gutil         = require('gulp-util'),
 	babel         = require('gulp-babel'),
 	del           = require('del'),
-	pug           = require('gulp-pug');
+    pug           = require('gulp-pug'),
+    nunjucks      = require('gulp-nunjucks'),
+    prettify      = require('gulp-html-prettify');
 
 const source = {
 	root: './app',
@@ -50,6 +52,17 @@ const source = {
 		php:  './app/**/*.php'
 	}
 };
+
+function nunja () {
+	return gulp.src('./app/templates/[^_]**.html')
+    .pipe(nunjucks.compile())
+    .pipe(prettify({
+        indent_size : 4
+    }))
+    .pipe(gulp.dest('./app'))
+    .pipe(browserSync.reload({ stream: true }));
+}
+gulp.task('nunja', nunja);
 
 function pugproc() {
 	return gulp.src(source.app.pug)
@@ -96,6 +109,7 @@ function watch() {
 	gulp.watch(source.watch.js, jsfiles);
 	gulp.watch(source.watch.php);
 	gulp.watch(source.watch.pug, pugproc);
+	gulp.watch('./app/templates/**/*.html', nunja).on('change', browserSync.reload);
 	gulp.watch(source.watch.html).on('change', browserSync.reload);
 	gulp.watch('./smartgrid.js', grid).on('change', browserSync.reload);
 }
