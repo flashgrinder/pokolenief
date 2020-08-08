@@ -1,0 +1,28 @@
+.button {
+    position: relative;
+    display: inline-block;
+    font-family: var(--font-roboto);
+    font-style: normal;
+    font-size: 16px;
+    line-height: 15px;
+    text-decoration: none;
+    text-align: center;
+    padding: 13px 25px;
+    z-index: 10;
+    background: transparent;
+    border-radius: 50px;
+    &_white {
+        background: var(--color-blue);
+        color: var(--color-white);
+        font-weight: 900;
+        &:hover {
+            box-shadow: 0px 0px 50px var(--color-blue);
+        }
+    }
+    &_primary {
+        color: var(--color-white);
+        &:hover {
+            box-shadow: 0px 4px 25px var(--color-primary);
+        }
+    }
+}

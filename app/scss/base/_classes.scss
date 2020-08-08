@@ -51,6 +51,9 @@
 /* Background */
 
 .bg {
+    &_violet {
+        background-color: var(--color-violet);
+    }
     &_krayola {
         background-color: var(--color-krayola);
     }
