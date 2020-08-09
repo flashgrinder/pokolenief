@@ -612,15 +612,13 @@ img {
 
 .head-slider__slide {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 400px;
+  grid-template: 400px/repeat(2, 1fr);
   grid-column-gap: 50px;
   place-items: center;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
           justify-content: space-between;
   margin-top: 100px;
-  min-height: 400px;
 }
 
 .head-slider__text {

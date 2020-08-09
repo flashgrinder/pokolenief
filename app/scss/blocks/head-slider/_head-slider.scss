@@ -3,20 +3,18 @@
     width: 100%;
     &__slide {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 400px;
+        grid-template: 400px / repeat(2, 1fr);
         grid-column-gap: 50px;
         place-items: center;
         justify-content: space-between;
         margin-top: 100px;
-        min-height: 400px;
     }
     &__text {
         max-width: 550px;
         background: var(--color-purple);
         clip-path: polygon(0 0, 95% 16%, 100% 100%, 0 100%);
         padding: 40px 80px 20px 30px;
-        justify-self: start
+        justify-self: start;
     }
     &__descr {
         margin-top: 20px;
