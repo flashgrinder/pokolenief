@@ -17,6 +17,7 @@
     }
     &__menu {
         display: flex;
+        align-items: center;
         @include lg-block {
             position: absolute;
             top: 100%;
@@ -36,7 +37,7 @@
                 padding: 20px 0;
             }
         }
-        &.header__menu_active {
+        &.header__menu--active {
             @include lg-block {
                 opacity: 1;
                 transform: scale(1) scaleZ(1) rotateX(0deg) rotateY(0deg);

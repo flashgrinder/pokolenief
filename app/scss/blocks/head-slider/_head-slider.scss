@@ -1,0 +1,67 @@
+.head-slider {
+    margin-top: 40px;
+    width: 100%;
+    &__slide {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 400px;
+        grid-column-gap: 50px;
+        place-items: center;
+        justify-content: space-between;
+        margin-top: 100px;
+        min-height: 400px;
+    }
+    &__text {
+        max-width: 550px;
+        background: var(--color-purple);
+        clip-path: polygon(0 0, 95% 16%, 100% 100%, 0 100%);
+        padding: 40px 80px 20px 30px;
+        justify-self: start
+    }
+    &__descr {
+        margin-top: 20px;
+    }
+    &__actions {
+        margin-top: 20px;
+    }
+    &__button {
+        margin-top: 20px;
+        &:first-child {
+            margin-right: 30px;
+        }
+    }
+    &__pic {
+        display: block;
+        max-width: 600px;
+        max-height: 450px;
+        height: 100%;
+        width: 100%;
+    }
+    &__pagination {
+        top: 0;
+        height: 45px !important;
+        margin: 0 auto;
+        text-align: center;
+        > .swiper-pagination-bullet-active {
+            color: var(--color-white);
+            background: linear-gradient(180deg, #6152D3 0%, #4969CC 100%), #4A68CC !important;
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 7% 90%);
+        }
+    }
+    &__bullet {
+        height: auto !important;
+        width: auto !important;
+        padding: 10px 10px 10px 20px;
+        line-height: 1;
+        font-weight: bold;
+        border-radius: 0 !important;
+        color: var(--color-violet);
+        background: transparent !important;
+        opacity: 1 !important;
+        margin: 0 40px 0 0 !important;
+        transition: .3s ease;
+        &:last-child {
+            margin: 0 !important;
+        }
+    }
+}

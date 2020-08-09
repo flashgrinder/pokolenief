@@ -51,16 +51,16 @@
 /* Background */
 
 .bg {
-    &_violet {
+    &--violet {
         background-color: var(--color-violet);
     }
-    &_krayola {
+    &--krayola {
         background-color: var(--color-krayola);
     }
-    &_white {
+    &--white {
         background-color: var(--color-white);
     }
-    &_gray {
+    &--gray {
         background-color: var(--color-gray);
     }
 }
@@ -71,33 +71,36 @@
     font-family: var(--font-roboto);
     font-style: normal;
     margin: 0;
-    &_big {
+    &--big {
 		@include xls(font-size, 28px);
 		@include sm(font-size, 24px);
 		font-size: 32px;
     }
-    &_medium {
+    &--medium {
         font-size: 22px;
     }
-    &_violet {
+    &--violet {
         color: var(--color-violet);
     }
-    &_white {
+    &--white {
         color: var(--color-white);
 	}
-	&_w-black {
+    &--gray {
+        color: var(--color-gray);
+	}
+	&--w-black {
 		font-weight: 900;
 	}
-	&_w-bold {
+	&--bold {
 		font-weight: bold;
 	}
-	&_w-medium {
+	&--medium {
 		font-weight: 500;
 	}
-	&_w-regular {
+	&--regular {
 		font-weight: normal;
 	}
-	&_uppercase {
+	&--uppercase {
 		text-transform: uppercase;
 	}
 }
@@ -108,31 +111,31 @@
     font-family: var(--font-roboto);
     font-style: normal;
     margin: 0;
-	&_dark {
+	&--dark {
 		color: var(--color-dark); 
 	}
-	&_white {
+	&--white {
 		color: var(--color-white);
 	} 
-	&_gray {
+	&--gray {
 		color: var(--color-gray);
 	}
-	&_s-normal {
+	&--normal {
 		font-size: 16px;
 	}
-	&_w-light {
+	&--light {
 		font-weight: 300;
 	}
-	&_w-regular {
+	&--regular {
 		font-weight: 400;
 	}
-	&_w-medium {
+	&--medium {
 		font-weight: 500;
 	}
-	&_w-bold {
+	&--bold {
 		font-weight: 700;
 	}
-	&_black {
+	&--black {
 		font-weight: 900;
 	}
 }
