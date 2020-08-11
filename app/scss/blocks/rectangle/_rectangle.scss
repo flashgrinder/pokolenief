@@ -1,0 +1,11 @@
+.rectangle {
+    position: relative;
+    padding: 40px 50px;
+    box-shadow: 8px 8px 25px rgba(78, 53, 203, 0.5);
+    &--rtl {
+        clip-path: polygon(4% 9%, 100% 0, 98% 100%, 0 90%);
+    }
+    &__descr ~ &__descr {
+        margin-top: 20px;
+    }
+}

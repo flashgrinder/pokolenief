@@ -1,6 +1,6 @@
 .head-screen {
     position: relative;
-    padding: 50px 0;
+    padding: 30px 0 50px;
     &__name {
         margin-top: 20px;
         line-height: 24px;
@@ -8,5 +8,6 @@
     &__line {
         margin-top: 30px;
         position: absolute;
+        z-index: 100;
     }
 }
