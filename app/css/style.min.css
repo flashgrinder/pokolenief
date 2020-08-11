@@ -201,7 +201,7 @@ img {
   font-family: var(--font-roboto);
   font-size: 16px;
   line-height: 1.25;
-  background-color: var(--color-white);
+  background-color: var(--color-white-gray);
   overflow-x: hidden;
 }
 
@@ -595,12 +595,18 @@ img {
 /* Head-screen */
 
 .head-screen {
-  padding: 30px 0;
+  position: relative;
+  padding: 50px 0;
 }
 
 .head-screen__name {
   margin-top: 20px;
   line-height: 24px;
+}
+
+.head-screen__line {
+  margin-top: 30px;
+  position: absolute;
 }
 
 /* Head-slider */
@@ -686,6 +692,18 @@ img {
 
 .head-slider__bullet:last-child {
   margin: 0 !important;
+}
+
+/* Line */
+
+.line {
+  width: 100%;
+  height: auto;
+}
+
+.line__svg {
+  width: 100%;
+  height: auto;
 }
 
 /* ANOTHER MODULES */
