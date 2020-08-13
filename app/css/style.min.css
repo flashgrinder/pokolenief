@@ -120,6 +120,10 @@ img {
   font-size: 22px;
 }
 
+.title--small {
+  font-size: 20px;
+}
+
 .title--violet {
   color: var(--color-violet);
 }
@@ -774,6 +778,7 @@ img {
 /* Features */
 
 .features {
+  position: relative;
   padding: 120px 0 60px;
 }
 
@@ -825,6 +830,90 @@ img {
 
 .features__line {
   margin-top: 30px;
+  position: absolute;
+  z-index: 100;
+}
+
+/* Trips */
+
+.trips {
+  position: relative;
+}
+
+.trips__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(430px, 1fr));
+  grid-auto-rows: 430px;
+  grid-auto-flow: row;
+}
+
+.trips__cart {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.trips__cart:hover .trips__bg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.trips__bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+}
+
+.trips__bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.trips__text {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 15px;
+  max-width: 460px;
+}
+
+.trips__date {
+  margin-top: 15px;
+}
+
+.trips__action {
+  margin-top: 30px;
+}
+
+.trips__line {
+  margin-top: -30px;
   position: absolute;
   z-index: 100;
 }

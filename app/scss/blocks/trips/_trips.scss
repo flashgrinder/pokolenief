@@ -1,0 +1,58 @@
+.trips {
+    position: relative;
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(430px, 1fr));
+        grid-auto-rows: 430px;
+        grid-auto-flow: row;
+    }
+    &__cart {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        &:hover .trips__bg {
+            transform: scale(1.1);
+        }
+    }
+    &__bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: scale(1);
+        transition: transform .5s ease;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+    }
+    &__text {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        padding: 0 15px;
+        max-width: 460px;
+    }
+    &__date {
+        margin-top: 15px;
+    }
+    &__action {
+        margin-top: 30px;
+    }
+    &__line {
+        margin-top: -30px;
+        position: absolute;
+        z-index: 100;
+    }
+}
