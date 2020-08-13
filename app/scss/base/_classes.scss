@@ -129,6 +129,12 @@
 	&--normal {
 		font-size: 16px;
 	}
+	&--small {
+		font-size: 14px;
+	}
+	&--tiny {
+		font-size: 12px;
+	}
 	&--light {
 		font-weight: 300;
 	}
@@ -141,7 +147,7 @@
 	&--bold {
 		font-weight: 700;
 	}
-	&--black {
+	&--w-black {
 		font-weight: 900;
 	}
 }
