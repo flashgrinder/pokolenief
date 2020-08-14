@@ -176,6 +176,10 @@ img {
   color: var(--color-gray);
 }
 
+.text--violet {
+  color: var(--color-violet);
+}
+
 .text--normal {
   font-size: 16px;
 }
@@ -1069,6 +1073,45 @@ img {
   cursor: pointer;
   text-decoration: none;
   color: var(--color--white);
+}
+
+/* Contacts */
+
+.contacts {
+  padding: 60px 0;
+}
+
+.contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: 400px;
+  grid-gap: 50px;
+}
+
+.contacts__adress {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  text-decoration: none;
+  font-style: normal;
+  margin-top: 30px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+
+.contacts__link {
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.contacts__text {
+  margin-top: 20px;
 }
 
 /* ANOTHER MODULES */
