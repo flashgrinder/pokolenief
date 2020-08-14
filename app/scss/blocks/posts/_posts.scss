@@ -3,6 +3,11 @@
     &--home-page {
         padding: 120px 0 60px;
     }
+    &__body {
+        &--page-home {
+            padding-bottom: 60px;
+        }
+    }
     &__heading {
         margin-bottom: 30px;
     }
@@ -11,9 +16,10 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-content: center;
         grid-gap: 30px;
-        &--page-home {
-            padding-bottom: 60px;
-        }
+    }
+    &__action {
+        margin-top: 30px;
+        text-align: center;
     }
     &__line {
         margin-top: -30px;
