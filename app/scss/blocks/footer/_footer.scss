@@ -1,0 +1,37 @@
+.footer {
+    &__content{
+        max-width: 1920px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        padding: 10px 50px 40px;
+        align-items: center;
+    }
+    &__logo {
+        padding: 40px 0;
+        text-align: center;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+    }
+    &__social {
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__soc-link {
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__soc-icon {
+        width: 30px;
+        height: 30px;
+        fill: var(--color-white);
+        transition: .3s ease;
+        &:hover {
+            fill: var(--color-blue);
+        }
+    }
+}

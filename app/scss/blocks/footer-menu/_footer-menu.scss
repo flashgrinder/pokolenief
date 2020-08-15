@@ -1,0 +1,32 @@
+.footer-menu {
+    font-size: 12px;
+    text-transform: uppercase;
+    &__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    &__item {
+        &::after {
+            content: '/';
+            color: var(--color-white);
+            margin: 0 15px;
+            font-size: 10px;
+        }
+        &:last-child {
+            &::after {
+                content: '';
+                margin: 0;
+            }
+        }
+    }
+    &__link {
+        color: var(--color-white);
+        text-decoration: none;
+        transition: .3s ease;
+        &:hover {
+            color: var(--color-blue);
+        }
+    }
+}
