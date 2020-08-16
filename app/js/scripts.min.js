@@ -15,4 +15,6 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     })
 
+    lightGallery(document.querySelector('.gallery__masonry'));
+
 })
