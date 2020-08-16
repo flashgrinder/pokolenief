@@ -10,14 +10,20 @@
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-items: center;
         text-decoration: none;
         font-style: normal;
         margin-top: 30px;
         justify-content: space-between;
     }
     &__link {
+        display: inline-block;
         text-decoration: none;
         margin-top: 20px;
+        transition: .3s ease;
+        &:hover {
+            color: var(--color-blue);
+        }
     }
     &__text {
         margin-top: 20px;
