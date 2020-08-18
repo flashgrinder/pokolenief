@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
 
+    // Slider
     const menu = ['F-TRIP', 'F-EDUCATION', 'F-CAREER', 'F-RULES']
     const mySwiper = new Swiper ('.head-slider', {
         // If we need pagination
@@ -15,6 +16,27 @@ window.addEventListener('DOMContentLoaded', function() {
         }
     })
 
+    // Gallery
     lightGallery(document.querySelector('.gallery__masonry'));
+
+    // Mobile-menu
+    let burgerMenu = document.querySelector('.burger-menu');
+	let headerMenu = document.querySelector('.header__menu');
+
+	function showHeaderMenu(e) {
+        headerMenu.classList.toggle('header__menu--active');  
+    }
+
+    function escMenu(e) {
+        if(headerMenu.classList.contains('header__menu--active')) {
+            if(e.keyCode === 27 || e.wich === 27) {
+                headerMenu.classList.remove('header__menu--active');
+            }
+        }
+    }
+
+    document.addEventListener("keydown", escMenu);
+
+    burgerMenu.addEventListener('click', showHeaderMenu);
 
 })

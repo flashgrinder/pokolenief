@@ -1,7 +1,14 @@
 .logo {
+    position: relative;
     display: inline-block;
     text-decoration: none;
+    z-index: 1000;
     &--prizm {
+        @include lg-block {
+            clip-path: none;
+            padding: 0;
+            background: none;
+        }
         padding: 23px 35px;
         background: linear-gradient(180deg, #6152D3 0%, #4969CC 100%), #4A68CC;
         clip-path: polygon(2% 0, 94% 13%, 100% 93%, 0 100%);

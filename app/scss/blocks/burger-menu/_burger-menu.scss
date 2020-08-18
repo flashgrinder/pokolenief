@@ -1,5 +1,5 @@
 .burger-menu {
-    @include lg(display, flex);
+    @include xls(display, flex);
     width: 30px;
     height: 20px;
     cursor: pointer;

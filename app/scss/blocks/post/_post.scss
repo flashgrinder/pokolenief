@@ -31,6 +31,7 @@
         bottom: 60px;
     }
     &__details {
+        @include md(padding, 20px);
         position: relative;
         padding: 30px;
         min-height: 400px;
@@ -38,6 +39,8 @@
         text-align: left;
     }
     &__info {
+        @include xls(margin, 0 20px);
+        @include md(margin, 0 20px);
         position: absolute;
         bottom: 30px;
         left: 0;

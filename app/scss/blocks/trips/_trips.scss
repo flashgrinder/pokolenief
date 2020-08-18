@@ -1,6 +1,11 @@
 .trips {
     position: relative;
     &__grid {
+        @include sm-block {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
+            grid-auto-rows: 350px;
+        }
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
         grid-template-rows: repeat(auto-fit, minmax(430px, 1fr));
@@ -44,13 +49,21 @@
         padding: 0 15px;
         max-width: 460px;
     }
+    &__title {
+        @include sm(font-size, 18px);
+    }
     &__date {
+        @include sm(font-size, 18px);
         margin-top: 15px;
     }
     &__action {
         margin-top: 30px;
     }
     &__line {
+        @include md-block {
+            margin-top: 0;
+            bottom: -15px;
+        }
         margin-top: -30px;
         position: absolute;
         z-index: 100;

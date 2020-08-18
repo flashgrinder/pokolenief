@@ -77,7 +77,7 @@ function sassproc() {
 	.pipe(sass().on('error', sass.logError))
 	.pipe(concat('style.min.css'))
 	.pipe(gcmq())
-	.pipe(postcss([autoprefixer()]))
+	.pipe(postcss([autoprefixer({grid: "autoplace"})]))
 	// .pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(source.app.css))
 	.pipe(browserSync.reload({ stream: true }));

@@ -1,5 +1,10 @@
 .footer {
     &__content{
+        @include xls-block {
+            grid-template-columns: 1fr;
+            grid-gap: 20px 0;
+            padding: 10px 10px 40px;
+        }
         max-width: 1920px;
         margin: 0 auto;
         display: grid;
@@ -11,11 +16,15 @@
         padding: 40px 0;
         text-align: center;
     }
+    &__copy {
+        @include xls(text-align, center);
+    }
     &__menu {
         display: flex;
         justify-content: center;
     }
     &__social {
+        @include xls(justify-content, center);
         display: flex;
         justify-content: flex-end;
     }

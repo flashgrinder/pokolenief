@@ -2,12 +2,25 @@
     font-size: 12px;
     text-transform: uppercase;
     &__list {
+        @include md-block {
+            flex-direction: column;
+            align-items: center;
+        }
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         padding: 0;
         margin: 0;
     }
+    &__item ~ &__item {
+        @include md(margin-top, 20px);
+    }
     &__item {
+        @include md-block {
+            &::after {
+                display: none;
+            }
+        }
         &::after {
             content: '/';
             color: var(--color-white);
