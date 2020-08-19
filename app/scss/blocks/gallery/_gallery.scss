@@ -1,8 +1,11 @@
 .gallery {
-    @include xls(padding, 60px 0);
     @include md(padding, 30px 0);
     position: relative;
-    padding: 120px 0 60px;
+    padding: 60px 0;
+    &--page-home {
+        @include xls(padding, 60px 0);
+        padding: 120px 0 60px;
+    }
     &__heading {
         margin-bottom: 30px;
     }
@@ -42,6 +45,36 @@
         }
         &:hover .gallery__img{
             filter: brightness(100%);
+        }
+        &--post {
+            height: 350px;
+            &:nth-child(4n+1) {
+                width: 550px;
+            }
+            &:nth-child(4n+2) {
+                width: 425px;
+            }
+            &:nth-child(4n+3) {
+                width: 380px;
+            }
+            &:nth-child(4n+4) {
+                width: 580px;
+            }
+            &:nth-child(4n+5) {
+                width: 480px;
+            }
+            &:nth-child(4n+6) {
+                width: 520px;
+            }
+            &:nth-child(4n+7) {
+                width: 540px;
+            }
+            &:nth-child(4n+8) {
+                width: 410px;
+            }
+            &:nth-child(4n+9) {
+                width: 350px;
+            }
         }
     }
     &__img {
