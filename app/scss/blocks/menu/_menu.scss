@@ -12,6 +12,7 @@
     &__list {
         @include xls-block {
             flex-direction: column;
+            justify-content: center;
         }
         display: flex;
         list-style: none;
@@ -32,6 +33,7 @@
             @include xls-block {
                 padding: 0;
                 margin-right: 0;
+                flex: auto;
             }
             flex: 1 1 0;
             &::after {

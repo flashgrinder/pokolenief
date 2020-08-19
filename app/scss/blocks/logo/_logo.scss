@@ -2,7 +2,7 @@
     position: relative;
     display: inline-block;
     text-decoration: none;
-    z-index: 1000;
+    
     &--prizm {
         @include lg-block {
             clip-path: none;
