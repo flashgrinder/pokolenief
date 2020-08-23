@@ -1,0 +1,47 @@
+.slider {
+    position: relative;
+    &__swiper {
+        @include lg(height, 450px);
+        height: 650px;
+        width: 100%;
+    }
+    &__text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 10;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    &__slide {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0, 0, 0, .5);
+            z-index: 0;
+        }
+    }
+    &__btn-prev, &__btn-next {
+        color: var(--color-white);
+    }
+    &__img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__line {
+        @include md-block {
+            bottom: -15px;
+        }
+        bottom: -30px;
+        position: absolute;
+        z-index: 100;
+    }
+}

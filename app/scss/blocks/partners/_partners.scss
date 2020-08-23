@@ -1,0 +1,26 @@
+.partners {
+    @include xls(padding, 60px 0);
+    @include sm(padding, 30px 0);
+    position: relative;
+    padding: 120px 0 60px;
+    &__heading {
+        margin-bottom: 30px;
+    }
+    &__grid {
+        @include md-block {
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+        justify-content: space-between;
+        place-items: center;
+        grid-gap: 30px;
+    }
+    &__img {
+        height: auto;
+        width: 100%;
+        max-height: 100px;
+        object-fit: contain;
+    }
+}

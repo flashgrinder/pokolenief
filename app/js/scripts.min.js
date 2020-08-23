@@ -1,9 +1,8 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    // Slider
+    // HEAD-SCREEN SLIDER
     const menu = ['F-TRIP', 'F-EDUCATION', 'F-CAREER', 'F-RULES']
-    const mySwiper = new Swiper ('.head-slider', {
-        // If we need pagination
+    const headSlider = new Swiper ('.head-slider', {
         slidesPerView: 1,
         loop: true,
         effect: 'fade',
@@ -13,6 +12,17 @@ window.addEventListener('DOMContentLoaded', function() {
             renderBullet: function (index, className) {
                 return '<span class="head-slider__bullet ' + className + '">' + (menu[index]) + '</span>';
             },
+        }
+    })
+
+    // SLIDER-RECITAL
+    const sliderRecital = new Swiper ('.slider__swiper', {
+        slidesPerView: 1,
+        loop: true,
+        effect: 'fade',
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
         }
     })
 

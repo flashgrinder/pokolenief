@@ -1,9 +1,9 @@
 .gallery {
-    @include md(padding, 30px 0);
+    @include xls(padding, 60px 0);
+    @include sm(padding, 30px 0);
     position: relative;
     padding: 60px 0;
     &--page-home {
-        @include xls(padding, 60px 0);
         padding: 120px 0 60px;
     }
     &__heading {

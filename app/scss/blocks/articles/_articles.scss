@@ -1,5 +1,5 @@
 .articles {
-    @include md(padding, 30px 0);
+    @include sm(padding, 30px 0);
     position: relative;
     padding: 60px 0;
     &--home-page {

@@ -1,0 +1,74 @@
+.programm {
+    @include xls(padding, 60px 0);
+    @include sm(padding, 30px 0);
+    position: relative;
+    padding: 120px 0 60px;
+    &__heading {
+        margin-bottom: 30px;
+    }
+    &__title {
+        padding: 10px 25px;
+        background: linear-gradient(180deg, #6152D3 -6.26%, #4969CC 100%), #4A68CC;
+        clip-path: polygon(0 0, 96% 9%, 100% 88%, 2% 100%);
+        text-align: center;
+    }
+    &__grid {
+        @include xl-block {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 0.33fr));
+        }
+        @include xls-block {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+        }
+        @include md-block {
+            grid-template-columns: 1fr;
+            grid-gap: 60px 30px;
+        }
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+        grid-gap: 60px 30px;
+    }
+    &__date, &__name {
+        display: block;
+    }
+    &__details {
+        margin-top: 20px;
+    }
+    &__summary {
+        color: var(--color-blue);
+    }
+    &__list {
+        margin-top: 20px;
+        padding-left: 18px;
+        list-style: none;
+    }
+    &__item {
+        display: flex;
+    }
+    &__item ~ &__item {
+        margin-top: 20px;
+    }
+    &__time {
+        margin-right: 10px;
+    }
+    &__images {
+        margin-top: 20px;
+    }
+    &__pic {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+    }
+    &__actions {
+        margin-top: 30px;
+        text-align: center;
+    }
+    &__line {
+        @include md-block {
+            margin-top: 0;
+            bottom: -15px;
+        }
+        margin-top: 30px;
+        position: absolute;
+        z-index: 100;
+    }
+}
