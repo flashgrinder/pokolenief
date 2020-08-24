@@ -86,9 +86,9 @@ gulp.task('sassproc', sassproc);
 
 function jsfiles() {
 	return gulp.src(source.app.libs)
-	// .pipe(sourcemaps.init())
+	.pipe(sourcemaps.init())
 	.pipe(concat('scripts.min.js'))
-	// .pipe(sourcemaps.write('.'))
+	.pipe(sourcemaps.write('.'))
 	.pipe(gulp.dest(source.app.js))
 	.pipe(browserSync.stream());
 }
@@ -143,7 +143,7 @@ function styles() {
 function scripts() {
 	return gulp.src(source.app.js + '*.js')
 	.pipe(babel({
-		presets: ['env']
+		presets: ['@babel/preset-env']
 	}))
 	.on('error', console.error.bind(console))
 	.pipe(uglify({
@@ -168,7 +168,7 @@ function optimg() {
 	return gulp.src(source.app.img)
 	.pipe(imagemin([
 		imagemin.gifsicle({interlaced: true}),
-		imagemin.jpegtran({progressive: true}),
+		imagemin.mozjpeg({progressive: true}),
 		imgRecompress({
 			loops: 5,
 			min: 70,
