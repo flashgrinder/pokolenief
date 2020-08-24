@@ -12,7 +12,8 @@ let gulp          = require('gulp'),
 	concat        = require('gulp-concat'),
 	imagemin      = require('gulp-imagemin'),
 	imgRecompress = require('imagemin-jpeg-recompress'),
-	pngquant      = require('imagemin-pngquant'),
+    pngquant      = require('imagemin-pngquant'),
+    imgMozjpeg    = require('imagemin-mozjpeg'),
 	ftp           = require('gulp-ftp'),
 	gutil         = require('gulp-util'),
 	babel         = require('gulp-babel'),
@@ -29,7 +30,7 @@ const source = {
 		css:   './app/css/',
 		sass:  './app/scss/*.scss',
 		fonts: './app/fonts/**/*.*',
-		img:   './app/img/**/*.*',
+		img:   './app/images/**/*.*',
 		js:    './app/js/',
 		libs:  [
 			// './app/libs/jquery-3.3.1.js',
@@ -40,7 +41,7 @@ const source = {
 		html:  './build',
 		css:   './build/css',
 		fonts: './build/fonts',
-		img:   './build/img',
+		img:   './build/images',
 		js:    './build/js'
 	},
 	watch: {
@@ -168,7 +169,7 @@ function optimg() {
 	return gulp.src(source.app.img)
 	.pipe(imagemin([
 		imagemin.gifsicle({interlaced: true}),
-		imagemin.mozjpeg({progressive: true}),
+		imagemin.mozjpeg({quality: 75, progressive: true}),
 		imgRecompress({
 			loops: 5,
 			min: 70,
