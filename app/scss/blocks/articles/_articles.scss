@@ -10,9 +10,14 @@
         margin-bottom: 30px;
     }
     &__grid {
+        @include xls-block {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+        }
+        @include md-block {
+            grid-template-columns: 1fr;
+        }
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 0.34fr));
         grid-gap: 30px;
     }
     &__action {

@@ -22,12 +22,12 @@
             transition: background 0.25s ease;
         }
     }
-    &:hover .post__image-bg {
+    &:hover .post-card__image-bg {
         &::before {
             background: rgba(0, 0, 0, 0.60);
         }
     }
-    &:hover .post__info {
+    &:hover .post-card__info {
         bottom: 60px;
     }
     &__details {
