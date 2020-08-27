@@ -1,0 +1,18 @@
+.reviews {
+    @include xls(padding, 60px 0);
+    @include sm(padding, 30px 0);
+    position: relative;
+    padding: 120px 0 60px;
+    &__heading {
+        @include sm(font-size, 22px);
+        font-size: 28px;
+        margin-bottom: 60px;
+    }
+    &__rows {
+        max-width: 665px;
+        margin: 0 auto;
+    }
+    &__review-cart {
+        margin-top: 30px;
+    }
+}

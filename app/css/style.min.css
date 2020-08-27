@@ -2512,6 +2512,87 @@ button.swiper-pagination-bullet {
   z-index: 100;
 }
 
+/* Reviews */
+
+.reviews {
+  position: relative;
+  padding: 120px 0 60px;
+}
+
+.reviews__heading {
+  font-size: 28px;
+  margin-bottom: 60px;
+}
+
+.reviews__rows {
+  max-width: 665px;
+  margin: 0 auto;
+}
+
+.reviews__review-cart {
+  margin-top: 30px;
+}
+
+/* Review-cart */
+
+.review-cart__ppl-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  text-align: left;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+}
+
+.review-cart__ava {
+  max-height: 145px;
+  max-width: 145px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.review-cart__img {
+  display: block;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.review-cart__text,
+.review-cart__event,
+.review-cart__date,
+.review-cart__like {
+  margin-top: 10px;
+}
+
+.review-cart__description {
+  margin-top: 30px;
+}
+
+.review-cart__description p ~ p {
+  margin: 20px 0 0 0;
+}
+
+.review-cart__description p:first-child {
+  margin: 0 0 0 0;
+}
+
+.review-cart__border {
+  margin-top: 20px;
+}
+
+.review-cart__border-img {
+  width: 100%;
+}
+
 /* Partners */
 
 .partners {
@@ -2958,6 +3039,10 @@ button.swiper-pagination-bullet {
     grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
   }
 
+  .reviews {
+    padding: 60px 0;
+  }
+
   .partners {
     padding: 60px 0;
   }
@@ -3330,6 +3415,35 @@ button.swiper-pagination-bullet {
 
   .programm {
     padding: 30px 0;
+  }
+
+  .reviews {
+    padding: 30px 0;
+  }
+
+  .reviews__heading {
+    font-size: 22px;
+  }
+
+  .review-cart__ppl-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+            align-items: center;
+  }
+
+  .review-cart__ava {
+    margin-right: 0;
+  }
+
+  .review-cart__text,
+  .review-cart__event,
+  .review-cart__date,
+  .review-cart__like {
+    text-align: center;
   }
 
   .partners {

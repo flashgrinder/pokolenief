@@ -1,0 +1,50 @@
+.review-cart {
+    &__ppl-info {
+        @include sm-block {
+            flex-direction: column;
+            align-items: center;
+        }
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        align-items: flex-start;
+    }
+    &__ava {
+        @include sm-block {
+            margin-right: 0;
+        }
+        max-height: 145px;
+        max-width: 145px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+    &__img {
+        display: block;
+        width: 145px;
+        height: 145px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__text, &__event, &__date, &__like {
+        @include sm-block {
+            text-align: center;
+        }
+        margin-top: 10px;
+    }
+    &__description {
+        margin-top: 30px;
+        p ~ p {
+            margin: 20px 0 0 0;
+        }
+        p:first-child {
+            margin: 0 0 0 0;
+        }
+    }
+    &__border {
+        margin-top: 20px;
+    }
+    &__border-img {
+        width: 100%;
+    }
+}
