@@ -2623,6 +2623,53 @@ button.swiper-pagination-bullet {
      object-fit: contain;
 }
 
+/* Partners */
+
+.team {
+  position: relative;
+  padding: 120px 0 60px;
+}
+
+.team__heading {
+  margin-bottom: 30px;
+}
+
+.team__grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.33fr));
+  grid-gap: 60px 30px;
+}
+
+.team__photo {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--color-krayola);
+}
+
+.team__img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team__info {
+  margin-top: 20px;
+}
+
+.team__descr {
+  margin-top: 15px;
+}
+
+.team__line {
+  margin-top: 30px;
+  position: absolute;
+  z-index: 100;
+}
+
 /* Modal */
 
 .modal {
@@ -2870,6 +2917,10 @@ button.swiper-pagination-bullet {
   .programm__grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 0.33fr));
   }
+
+  .team__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -3045,6 +3096,14 @@ button.swiper-pagination-bullet {
 
   .partners {
     padding: 60px 0;
+  }
+
+  .team {
+    padding: 60px 0;
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0.5fr));
   }
 
   .footer__content {
@@ -3265,6 +3324,17 @@ button.swiper-pagination-bullet {
     grid-gap: 30px;
   }
 
+  .team__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 60px 30px;
+  }
+
+  .team__line {
+    margin-top: 0;
+    bottom: -15px;
+  }
+
   .footer-menu__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3447,6 +3517,10 @@ button.swiper-pagination-bullet {
   }
 
   .partners {
+    padding: 30px 0;
+  }
+
+  .team {
     padding: 30px 0;
   }
 
