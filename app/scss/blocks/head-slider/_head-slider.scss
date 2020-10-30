@@ -22,29 +22,68 @@
         margin-top: 100px;
     }
     &__text {
-        @include xl(padding, 40px 30px 20px 30px);
+        @include xl(padding, 0px 30px 0px 30px);
         @include lg(justify-self, center);
-        @include sm(padding, 40px 20px 20px 20px);
+        @include sm(padding, 0px 20px 0px 20px);
         max-width: 550px;
         background: var(--color-purple);
         clip-path: polygon(0 0, 95% 16%, 100% 100%, 0 100%);
-        padding: 40px 80px 20px 30px;
+        padding: 0px 80px 0px 30px;
+        opacity: 0;
         justify-self: start;
+        transform: translateY(-50px);
     }
-    &__descr {
-        margin-top: 20px;
+    &__title {
+        opacity: 0;
     }
-    &__actions {
+    .swiper-slide.js-animated {
+        .head-slider__text {
+            @include xl(padding, 40px 30px 20px 30px);
+            @include sm(padding, 40px 20px 20px 20px);
+            padding: 40px 80px 20px 30px;
+            opacity: 1;
+            transform: translateY(0px);
+            transition: .5s ease;
+            transition-delay: .3s;
+        }
+        .head-slider__title,
+        .head-slider__descr, 
+        .head-slider__actions,
+        .head-slider__pic {
+            opacity: 1;
+            transition: .6s ease;
+            transform: translateY(0px);
+        }
+        .head-slider__title {
+            transition-delay: .5s;
+        }
+        .head-slider__descr {
+            transition-delay: .7s;
+        }
+        .head-slider__actions {
+            transition-delay: .9s;
+        }
+        .head-slider__pic {
+            transition-delay: .5s;
+            transform: scale(1);
+        }
+    }
+    &__descr, &__actions, &__title {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    &__descr, &__actions {
         margin-top: 20px;
     }
     &__button {
-        margin-top: 20px;
         &:first-child {
             margin-right: 30px;
         }
     }
     &__pic {
         display: block;
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
         max-width: 600px;
         max-height: 450px;
         height: 100%;

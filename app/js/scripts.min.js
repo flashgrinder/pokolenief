@@ -1,16 +1,31 @@
 window.addEventListener('DOMContentLoaded', function() {
 
     // HEAD-SCREEN SLIDER
-    const menu = ['F-TRIP', 'F-EDUCATION', 'F-CAREER', 'F-RULES']
-    const headSlider = new Swiper ('.head-slider', {
+    let menu = ['F-TRIP', 'F-EDUCATION', 'F-CAREER', 'F-RULES'];
+
+    let headSlider = new Swiper ('.head-slider', {
         slidesPerView: 1,
         loop: true,
         effect: 'fade',
+        speed: 500,
+        autoplay: {
+            delay: 5000,
+        },
         pagination: {
         el: '.head-slider__pagination',
                 clickable: true,
             renderBullet: function (index, className) {
                 return '<span class="head-slider__bullet ' + className + '">' + (menu[index]) + '</span>';
+            },
+        },
+        on: {
+            slideChangeTransitionStart: function(e) {
+                let curSlide = this.slides[this.activeIndex];
+                curSlide.classList.remove('js-animated');
+            },
+            slideChangeTransitionEnd: function(e) {
+                let curSlide = this.slides[this.activeIndex];
+                curSlide.classList.add('js-animated');
             },
         }
     })
