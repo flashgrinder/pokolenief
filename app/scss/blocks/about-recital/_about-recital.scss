@@ -2,7 +2,6 @@
     @include sm(padding, 30px 0);
     position: relative;
     padding: 60px 0;
-    background: radial-gradient(79.58% 188.07% at 20.42% 42.79%, #00A0E3 0%, rgba(80, 160, 255, 0.277269) 62.18%, rgba(255, 255, 255, 0) 100%), #4E35CB;
     &__grid {
         @include lg-block {
             grid-template-columns: 1fr;

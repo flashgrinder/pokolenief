@@ -29,6 +29,7 @@
   --color-krayola: #AEA5DE;
   --color-white-gray: #E5E5E5;
   --color-lgradient-blue: linear-gradient(180deg, #6152D3 -6.26%, #4969CC 100%), #4A68CC;
+  --color-rgradient-blue: radial-gradient(79.58% 188.07% at 20.42% 42.79%, #00A0E3 0%, rgba(80, 160, 255, 0.277269) 62.18%, rgba(255, 255, 255, 0) 100%), #4E35CB;
   --font-roboto: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -220,6 +221,10 @@ img {
 
 .bg--lgradient-blue {
   background: var(--color-lgradient-blue);
+}
+
+.bg--rgradient-blue {
+  background: var(--color-rgradient-blue);
 }
 
 /* Title */
@@ -2390,7 +2395,6 @@ button.swiper-pagination-bullet {
 .about-recital {
   position: relative;
   padding: 60px 0;
-  background: radial-gradient(79.58% 188.07% at 20.42% 42.79%, #00A0E3 0%, rgba(80, 160, 255, 0.277269) 62.18%, rgba(255, 255, 255, 0) 100%), #4E35CB;
 }
 
 .about-recital__grid {
